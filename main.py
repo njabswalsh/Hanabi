@@ -2,9 +2,8 @@ from card import Card
 from deck import Deck
 
 deck = Deck()
-deck.fill_deck()
-for card in deck 
-print(card.color)
+for card in deck.cards: 
+	print(str(card.number) + " of " + card.color)
 
 #card = Card("red", 3)
 #print(card.color)
