@@ -3,3 +3,5 @@ class Card:
     self.color = color
     self.number = number
 
+  def __str__(self):
+    return (str(self.number) + " of " + self.color) 
