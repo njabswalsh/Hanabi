@@ -7,23 +7,24 @@ class Table:
     # if(discarded)
     #   self.discarded = discarded
     # else
-    self.discarded = {}
+    self.discarded = {"red":[],"green":[],"blue":[],"brown":[],"purple":[]}
+
+  def print_state(self):
+    print("Played:")
+    for key in self.played:
+      print(str(self.played[key]) + " of " + key)
 
   # Returns 1 if card is playable, 0 otherwise
-  def play_card(self, card):
+  def play(self, card):
     if (self.is_playable(card)):
       self.played[card.color] += 1 
       return 1
     else:
       return 0 
-    
-  def print_state(self):
-    print("Played:")
-    for key in self.played:
-      print(str(self.played[key]) + " of " + key)
 
   def is_playable(self, card):
     playable = False
     if (self.played[card.color] == card.number - 1):
       playable = True  
     return playable
+

@@ -23,7 +23,7 @@ table = Table()
 table.print_state()
 print
 one_of_brown = Card("brown",1)
-table.play_card(one_of_brown)
+table.play(one_of_brown)
 table.print_state()
 #card = Card("red", 3)
 #print(card.color)
