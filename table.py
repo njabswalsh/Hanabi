@@ -13,6 +13,13 @@ class Table:
     print("Played:")
     for key in self.played:
       print(str(self.played[key]) + " of " + key)
+    print 
+    print("Discarded: ")
+    for key in self.discarded:
+      print(key + ":")
+      for number in self.discarded[key]:
+        print(str(number)),
+      print
 
   # Returns 1 if card is playable, 0 otherwise
   def play(self, card):
@@ -28,3 +35,8 @@ class Table:
       playable = True  
     return playable
 
+  def discard(self, card):
+    card_color = card.color
+    array = self.discarded[card_color]
+    array.append(card.number)
+    array.sort()

@@ -24,6 +24,9 @@ table.print_state()
 print
 one_of_brown = Card("brown",1)
 table.play(one_of_brown)
+table.discard(one_of_brown)
+for card in hand:
+  table.discard(card)
 table.print_state()
 #card = Card("red", 3)
 #print(card.color)
