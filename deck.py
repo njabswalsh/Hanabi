@@ -2,7 +2,7 @@ from card import Card
 import random
 
 class Deck:
-  colors = ["red", "blue", "green", "purple", "brown"]
+  colors = ["red", "blue", "green", "yellow", "white"]
   numbers = [1, 1, 1, 2, 2, 3, 3, 4, 4, 5]
 
   def __init__(self):

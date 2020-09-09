@@ -22,9 +22,9 @@ print("TABLE STUFF")
 table = Table()
 table.print_state()
 print
-one_of_brown = Card("brown",1)
-table.play(one_of_brown)
-table.discard(one_of_brown)
+one_of_yellow = Card("yellow",1)
+table.play(one_of_yellow)
+table.discard(one_of_yellow)
 for card in hand:
   table.discard(card)
 table.print_state()

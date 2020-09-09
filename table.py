@@ -1,13 +1,13 @@
 class Table:
-  def __init__(self, played=None, discarded=None):
+  def __init__(self, played=None, discarded=None, colors=["red", "blue", "green", "yellow", "white"]):
     # if(played)
     #   self.played = played
     # else
-    self.played = {"red":0,"green":0,"blue":0,"brown":0,"purple":0}
+    self.played =  {color : 0 for color in colors}
     # if(discarded)
     #   self.discarded = discarded
     # else
-    self.discarded = {"red":[],"green":[],"blue":[],"brown":[],"purple":[]}
+    self.discarded = {color : [] for color in colors}
 
   def print_state(self):
     print("Played:")
