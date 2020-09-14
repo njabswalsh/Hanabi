@@ -16,18 +16,17 @@ class Table:
     print 
     print("Discarded: ")
     for key in self.discarded:
-      print(key + ":")
-      for number in self.discarded[key]:
-        print(str(number)),
+      print(key + ": {}".format(self.discarded[key]))
       print
 
-  # Returns 1 if card is playable, 0 otherwise
+  # Returns True if card is playable, False otherwise
   def play(self, card):
     if (self.is_playable(card)):
       self.played[card.color] += 1 
-      return 1
+      return True
     else:
-      return 0 
+      self.discard(card)
+      return False 
 
   def is_playable(self, card):
     playable = False
@@ -40,3 +39,6 @@ class Table:
     array = self.discarded[card_color]
     array.append(card.number)
     array.sort()
+
+  def num_cards_played(self):
+    return sum(num_played for color, num_played in self.played.items())

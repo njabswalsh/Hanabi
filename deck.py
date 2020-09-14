@@ -19,6 +19,11 @@ class Deck:
 
   def draw(self, number):
     ret = []
+    if number > self.cards_left():
+      ret += self.cards
+      self.cards = []
+      return ret
+
     for i in range(number):
       ret.append(self.cards.pop())
     return ret

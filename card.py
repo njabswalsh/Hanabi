@@ -4,4 +4,4 @@ class Card:
     self.number = number
 
   def __str__(self):
-    return (str(self.number) + " of " + self.color.capitalize())
+    return (self.color.capitalize() + " " + str(self.number))
